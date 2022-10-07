@@ -1,0 +1,76 @@
+<!--comecar codigo por html, em seguida css e por ultimo, javascript-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./js/scripts.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="todo-container">
+            <header>aFazeres</header>
+            <form id="header-adicionar"><!--formulario-->
+                <p>Adicionar Tarefa</p><!--mensagem superior-->
+                <div class="form-adicionar">
+                    <input 
+                        type="text" 
+                        id="input-header" 
+                        placeholder="Campo Vazio"
+                    /><!--Campo de preenchimento-->
+                    <button type="submit"> <!--declaracao de botao-->
+                        <i class="fa-tin fa-plus"></i><!--Font Awesome-->
+                    </button>
+                </div>
+            </form>
+            <form id="header-editar" class="hide">
+                <p>editar</p>
+                <div class="controle-formulario">
+                    <input 
+                        type="text" 
+                        id="edit-input"
+                        placeholder="editar" />
+                    <buttton type="submit"><!--declaracao de botao-->
+                        <i class="fa-solid fa-check-square-o"></i><!--botao check-->
+                    </buttton>
+                </div>
+                <button id="botao-cancelar">Cancelar</button>
+            </form>
+            <div id="header-barra-ferramentas">
+                <div id="procurar">
+                    <h4>Pesquisar:</h4>
+                    <form>
+                        <input type="text" id="search-input" placeholder="Buscar..." />
+                        <button id="erase-button">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </button>
+                    </form>
+                </div>
+            <div id="header-filtro">
+                <h4>Filtrar</h4>
+                <select id="selecionar-filtro"><!--botao opcoes-->
+                    <option value="all"> todos</option>
+                    <option value="completos"> completos</option>
+                    <option value="a-fazer"> incompletos</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="a-fazer done"><!--botoes icones a check, lapis e cancel-->
+                <h3>A Fazer</h3>
+                <button class="terminar-a-fazer">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="editar-a-fazer">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remover-a-fazer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
