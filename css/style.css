@@ -1,0 +1,181 @@
+/* Geral */
+* {
+    padding: 0 auto;/*espacamento dentro do conteudo centralizado automaticamente*/
+    margin: 0 auto;/*margin fora do conteudo*/
+    font-family: Arial;
+    color: (210,210,210);
+    box-sizing: border-box;/*borda caixa*/
+
+}
+
+body{
+    background-color: darkgrey;
+
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 1px solid black;/*borda de 1pixel*/
+    padding: .3rem .6rem;/*margem*/
+    font-size: 1rem;/*tamanho da fonte*/
+    cursor: pointer;/*mudar o tipo de cursor quando passar em cima*/
+    justify-content: center;/*itens dentro do container ficar no centro*/
+    align-items: center;/*alinhar itens no centro da tela*/
+    transition: 0.4s;/*tempo de duracao da transicao hover*/
+
+}
+
+button:hover {
+    background-color: darkslategray;
+    color: white;/*icone ficar branco quando mouse passar em cima*/ 
+
+}
+
+buttton:hover i {
+    color: white;/*icone ficar branco quando mouse passar em cima*/ 
+
+}
+
+button i{
+    color: black;/*icone ser preto*/
+    font-weight: bold;/*negrito em volta*/
+    pointer-events: none;/*ponteiro do mouse nao ter poder sob icone*/
+
+}
+
+input, select{
+    padding: .25rem 0.5rem;
+
+}
+
+.hide{
+    display: none;/*botao funcionar e nao ser um icone*/
+
+}
+
+/*To-Do header*/
+
+.todo-container{
+    max-width: 450px;/*largura maxima*/
+    margin: 3rem auto;/*altura da tabela na pagina(branca na cinza)*/
+    background-color: white;
+    padding: 1.5rem;/*margen interna*/
+    border-radius: 15px;/*Borda redonda*/
+
+}
+
+.todo-container header{
+    text-align: center;
+    padding: 5px 5px 5px;/*margem interna em cima/lados/baixo*/
+    border-bottom: 1px solid #ccc;/*tamanho borda/ cor solida/ preto*/
+    font-size: 28px;
+
+}
+
+/*Formulario inteiro*/
+#header-adicionar, 
+#header-editar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+
+}
+
+#header-adicionar, #header-editar p{
+    margin-bottom: 3px;/*margem para afastar do formulario*/
+    font-weight: bold;/*deixar em negrito*/
+
+}
+
+.form-adicionar{
+    display: center;/*deixa os inputs ao lado dos botoes*/
+
+}
+
+.form-adicionar input{
+    margin: .3px;
+}
+
+#botao-cancelar{
+    margin-top: 5px;
+}
+
+/*pesquisar*/
+
+#header-barra-ferramentas{
+    padding: 1rem; /*espacamento interno de 15px*/
+    border-bottom: 1px solid #ccc;/*botao de borda cor ccc*/
+    display: flex;/*centralizar itens*/
+
+}
+
+#header-barra-ferramentas h4{
+    margin-bottom: 0.5rem;/*afastar dos formularios*/
+
+
+}
+
+#procurar{
+    border-right: 1px solid #DDD;/*criar linha na direita*/
+    padding-right: 1rem;/*margem entre a borda e os itens de 1rem*/
+    margin-right: 1rem;/*afastar elementos*/
+    width: 65%;/*distancia */
+    display: flex;/*adaptar botoes*/
+    flex-direction: column;/*adicao ao comando flex para ficar em baixo um do outro*/
+
+}
+
+#procurar form{
+    display: flex;/*adaptar tamanho dos todo conforme existencia*/
+
+}
+
+#procurar input{
+    width: 100%;/*preencher toda largura*/
+    margin-right: 0.3rem;/*afastar botao da caixa de pesquisa*/
+
+}
+
+#header-filtro{
+    width: 35%;
+    display: flex;/*alinhar itens*/
+    flex-direction: column;/*alinhar itens porem em coluna*/
+
+}
+
+#header-filtro select{
+    flex: 1;/*caixa de filtro ocupar toda largura disponivel*/
+
+}
+
+/*to-do list*/
+
+.a-fazer {
+    display: flex;/*alinhar itens*/
+    justify-content: space-around;/*itens ficarao em volta*/
+    align-items: center;/*centralizar itens na vertical*/
+    padding: 1rem;/*espacamento interno*/
+    border-bottom: 1px solid #DDD;/*criar linha na direita*/
+    transition: .4s;/*quando completar, ativar transicao*/
+
+}
+.a-fazer h3{
+    flex: 1;/*afastar itens em 16px*/
+    font-size: 15px;
+
+}
+
+.a-fazer button{
+    margin-left: 0.4rem;/*afastar botoes*/
+
+}
+
+.done{
+    background-color: darkslategray;
+}
+
+.done h3{
+    color: white;
+    text-decoration: line-through;/*linha passar pelo texto*/
+    font-style: italic;
+}
